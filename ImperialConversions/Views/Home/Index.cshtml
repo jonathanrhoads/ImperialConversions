@@ -1,0 +1,59 @@
+﻿@model ImperialConversions.Models.Lengths
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Length Unit Conversion</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="page-header">
+                    <h2>Length Unit Conversion</h2>
+                </div>
+                <form asp-action="Calculate" method="post" class="form-inline" role="form">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-5">
+                            <div class="form-group">
+                                <label asp-for="from" class="sr-only">From:</label>
+                                <input asp-for="from" type="number" class="form-control" placeholder="From" id="from" required />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="conversion" class="sr-only">Unit From:</label>
+                                <select asp-for="conversion" class="form-control" id="unitFrom">
+                                
+                                    <option value="true">Feet to Inches</option>
+                                    <option value="false">Inches to Feet</option>
+                                
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-2">
+                            <button type="submit" class="btn btn-default">Convert</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
